@@ -1,33 +1,77 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# Mini Project
 
-## Getting Started
+An AI-powered extension that summarizes YouTube videos.
 
-First, run the development server:
+## Table of Contents
 
-```bash
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Development](#development)
+- [Build and Deployment](#build-and-deployment)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+Mini Project is a browser extension that leverages AI to provide summaries of YouTube videos. This extension is built using React and Plasmo framework.
+
+## Features
+
+- Summarizes YouTube videos with a single click.
+- Displays the summary directly in the popup.
+- Easy to use and lightweight.
+
+## Installation
+
+To install the extension, follow these steps:
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/mini-project.git
+    cd mini-project
+    ```
+
+2. Install dependencies:
+    ```sh
+    pnpm install
+    ```
+
+## Usage
+
+1. Open the extension popup by clicking on the extension icon in the browser toolbar.
+2. Click the "Get Summary" button to fetch the summary of the currently active YouTube video.
+
+## Development
+
+To start developing the extension, run:
+
+```sh
 pnpm dev
-# or
-npm run dev
 ```
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+This will start the development server and watch for changes.
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+## Build and Deployment
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
+To build the extension for production, run:
 
-## Making production build
-
-Run the following:
-
-```bash
+```sh
 pnpm build
-# or
-npm run build
+```
+To package the extension into a zip file, run:
+
+```sh
+pnpm package
 ```
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+The extension can be submitted to the web store using the GitHub Actions workflow defined in [`.github/workflows/submit.yml`](command:_github.copilot.openRelativePath?%5B%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2Fhome%2Fnikhil%2Fprogramming%2FminiProject%2FminiExtension%2F.github%2Fworkflows%2Fsubmit.yml%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%5D "/home/nikhil/programming/miniProject/miniExtension/.github/workflows/submit.yml").
 
-## Submit to the webstores
+## Contributing
 
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
