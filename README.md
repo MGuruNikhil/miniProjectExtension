@@ -11,7 +11,6 @@ An AI-powered extension that summarizes YouTube videos.
 - [Development](#development)
 - [Build and Deployment](#build-and-deployment)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -71,7 +70,3 @@ The extension can be submitted to the web store using the GitHub Actions workflo
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
