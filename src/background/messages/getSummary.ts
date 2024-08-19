@@ -9,6 +9,7 @@ const handler: PlasmoMessaging.MessageHandler = async (req, res) => {
     if(isSummarizing) {
         res.send({
             summary: "",
+            videoId: "",
             loading: true
         })
         return
@@ -18,6 +19,7 @@ const handler: PlasmoMessaging.MessageHandler = async (req, res) => {
     if(videoId === tempVideoId) {
         res.send({
             summary: tempSummary,
+            videoId: tempVideoId,
             loading: false
         })
         return
@@ -35,6 +37,7 @@ const handler: PlasmoMessaging.MessageHandler = async (req, res) => {
             isSummarizing = false
             res.send({
                 summary: result.summary,
+                videoId: result.video_id,
                 loading: false
             })
         } catch (error) {
@@ -42,12 +45,14 @@ const handler: PlasmoMessaging.MessageHandler = async (req, res) => {
             console.error("Failed to fetch summary:", error)
             res.send({
                 summary: "",
+                videoId: "",
                 loading: false
             })
         }
     } else {
         res.send({
             summary: "",
+            videoId: "",
             loading: false
         })
     }
