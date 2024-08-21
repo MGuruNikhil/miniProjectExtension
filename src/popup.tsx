@@ -97,7 +97,7 @@ function IndexPopup() {
                 {isLoading ? <CircularSpinner /> : <>Get Summary</>}
             </button>
             {isLoading && (
-                <p className="text-sm">Summarizing the video will take a while, please wait.</p>
+                <p className="text-xs text-center">Summarizing the video will take a while, please wait.</p>
             )}
             {(summary && summary.length !== 0) && (
                 <p className="bg-gray-700 rounded-lg p-2 overflow-auto">{summary}</p>
